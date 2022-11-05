@@ -15,3 +15,7 @@ EOF
 done
 
 git submodule init
+
+git add .gitmodules
+git commit -m "`date`"
+git push
