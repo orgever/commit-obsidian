@@ -1,6 +1,6 @@
 #!/bin/bash
 
-umask 007
+# umask 007
 
 touch .lock
 
@@ -32,6 +32,6 @@ bash -x /code/submodules.sh
 
 bash -x /code/commit-submodules.sh
 
-bash -x /code/permissions.sh
+# bash -x /code/permissions.sh
 
 rm -rf .lock
