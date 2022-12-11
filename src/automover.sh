@@ -3,6 +3,13 @@
 while /bin/true
 do
     echo "Run automover"
+    FILE=$DATA_DIR/.lock
+    if [[ -f "$FILE" ]]; then
+        echo "$FILE exists. Sleeping."
+        sleep 10
+        continue
+    fi
+    echo "Move files"
 
     # for each md file in obs dir
     ls $DATA_DIR | grep ".md$" |
