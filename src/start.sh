@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# umask 007
-
 touch .lock
 
 # for each md file in obs dir
@@ -31,7 +29,5 @@ done
 bash -x /code/submodules.sh
 
 bash -x /code/commit-submodules.sh
-
-# bash -x /code/permissions.sh
 
 rm -rf .lock
